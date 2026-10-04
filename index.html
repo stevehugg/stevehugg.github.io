@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steve Hugg | Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio and software projects by Steve Hugg." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --card-border: #30363d;
+      --text-main: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --tag-bg: #21262d;
+      --tag-border: #363b42;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #3fb950;
+      background: rgba(63, 185, 80, 0.1);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #3fb950;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .bio {
+      color: var(--text-main);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .card-platform {
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: border-color 0.15s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-value {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="status-badge">
+        <span class="status-dot"></span> Active Projects & Systems
+      </div>
+      <h1>Steve Hugg</h1>
+      <p class="subtitle">Systems Engineer & Mobile App Developer</p>
+      <p class="bio">
+        Focusing on cross-platform mobile development with Flutter & Dart, self-hosted infrastructure, and digital consumer systems. Passionate about performant client software, local compute pipelines, and intuitive user experiences.
+      </p>
+    </header>
+
+    <section>
+      <h2>Featured Software</h2>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Big Winner</span>
+          <span class="card-platform">Flutter / Android & iOS</span>
+        </div>
+        <p>
+          A fast, animated lottery simulation engine designed to replicate high-speed drawing dynamics, probability models, and responsive cross-platform gameplay.
+        </p>
+        <div class="tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Mobile Architecture</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Connect & Support</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">
+          <span class="contact-label">SOURCE REPOSITORIES</span>
+          <span class="contact-value">GitHub Profile</span>
+        </a>
+        <a class="contact-card" href="mailto:steve.hugg@gmail.com">
+          <span class="contact-label">DIRECT INQUIRIES</span>
+          <span class="contact-value">steve.hugg@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://account.venmo.com/u/YOUR_VENMO_USERNAME" target="_blank" rel="noopener">
+          <span class="contact-label">DEVELOPER COFFEE / TIP</span>
+          <span class="contact-value">Venmo Handle</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 Steve Hugg. Hosted on GitHub Pages.</span>
+      <span>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io" target="_blank" rel="noopener">View Source</a>
+      </span>
+    </footer>
+  </main>
+</body>
+</html>
